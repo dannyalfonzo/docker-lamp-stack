@@ -49,3 +49,17 @@ docker-compose up
 docker-compose build
 ``` 
 
+/*********** ADDED BY DANNY *******************/
+
+docker-compose ps
+   Name                  Command               State                    Ports                  
+-----------------------------------------------------------------------------------------------
+lamp_apache   docker-php-entrypoint apac ...   Up      0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp
+lamp_db       docker-entrypoint.sh mysqld      Up      0.0.0.0:3306->3306/tcp, 33060/tcp
+
+Execute mysql command from the host to container running mysql server
+docker exec -t -i lamp_db /bin/bash
+root@141f63a75843:/#
+
+
+
